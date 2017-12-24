@@ -23,3 +23,4 @@ pex:
 
 clean:
 	rm -rf wheelhouse
+	rm -rf dist

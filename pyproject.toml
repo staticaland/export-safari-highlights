@@ -3,11 +3,16 @@ requires = ["flit"]
 build-backend = "flit.buildapi"
 
 [tool.flit.metadata]
-module = "exporta"
+module = "export_safari_highlights"
 author = "Anders K. Pettersen"
 author-email = "andstatical@gmail.com"
 home-page = "https://github.com/staticaland/export-safari-highlights"
 classifiers = ["License :: OSI Approved :: MIT License"]
+requires=["requests",
+    "clint",
+    "browsercookie",
+    "blindspin",
+]
 
 [tool.flit.scripts]
-flit = "exporta:main"
+flit = "export_safari_highlights:main"
