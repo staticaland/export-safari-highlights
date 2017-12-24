@@ -6,6 +6,10 @@ all: hi
 hi:
 	@echo "Hello!"
 
+isort:
+	@echo "Sorting imports!"
+	isort *.py
+
 pex:
 	make clean
 	pip download -r <(pipenv lock -r) --dest ./wheelhouse

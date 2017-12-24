@@ -8,10 +8,13 @@ name = "pypi"
 [dev-packages]
 
 pex = "*"
+flit = "*"
+isort = "*"
 
 
 [packages]
 
+"-e ." = "*"
 clint = "*"
 browsercookie = "*"
 requests = "*"

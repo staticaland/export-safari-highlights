@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "exporta"
+author = "Anders K. Pettersen"
+author-email = "andstatical@gmail.com"
+home-page = "https://github.com/staticaland/export-safari-highlights"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+[tool.flit.scripts]
+flit = "exporta:main"
