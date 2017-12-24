@@ -1,9 +1,21 @@
 from clint.textui import progress, puts
+from clint import arguments
 import blindspin
 import browsercookie
 import requests
 
-jar = browsercookie.firefox()
+args = arguments.Args()
+
+if args.get(0) == 'firefox':
+    puts('Grabbing cookies from Firefox')
+    jar = browsercookie.firefox()
+elif args.get(0) == 'chrome':
+    puts('Grabbing cookies from Chrome')
+    jar = browsercookie.chrome()
+else:
+    puts('Grabbing cookies from Firefox')
+    jar = browsercookie.firefox()
+
 url = 'https://www.safaribooksonline.com/a/export/csv/'
 
 puts('\nWaiting for download to begin... (may take a while)')
