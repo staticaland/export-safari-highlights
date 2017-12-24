@@ -15,4 +15,4 @@ requires=["requests",
 ]
 
 [tool.flit.scripts]
-flit = "export_safari_highlights:main"
+flit = "export_safari_highlights.core:main"
