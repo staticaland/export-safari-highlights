@@ -14,7 +14,6 @@ isort = "*"
 
 [packages]
 
-"-e ." = "*"
 clint = "*"
 browsercookie = "*"
 requests = "*"

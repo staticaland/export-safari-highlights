@@ -2,7 +2,7 @@
 
 A script to download highlights from Safari Books Online with totally uneccessary features and imports.
 
-Trying out some `pipenv` and `pex` stuff.
+Trying out some `pipenv`, `pex` and `flit`.
 
 To develop:
 
@@ -16,7 +16,7 @@ To make a PEX:
 make pex
 ```
 
-Why a silly Makefile?
+Why a silly `Makefile`?
 
 > Automate to save mental energy, not time
 
@@ -25,3 +25,34 @@ Why a silly Makefile?
 - [John Cook](https://www.johndcook.com/blog/2015/12/22/automate-to-save-mental-energy-not-time/)
 
 ✨
+
+# Build
+
+A Python `wheel` is a zip file. The code in this repo is put inside the zip file along with some metadata text files. We need a package manager that knows what to do with this zip file: `pip`.
+
+This project uses `flit` to generate the (wheel) zip file. Most other projects use `setuptools` through `pip` with a `setup.py` file. `pip` version 10 will support `pyproject.toml`.
+
+This is the content of the wheel zip file of this project:
+
+```
+├── export_safari_highlights
+│   ├── __init__.py
+│   ├── __main__.py
+│   └── core.py
+└── export_safari_highlights-1.1.dist-info
+    ├── LICENSE
+    ├── METADATA
+    ├── RECORD
+    ├── WHEEL
+    └── entry_points.txt
+```
+
+It is built like this:
+
+```
+flit build
+```
+
+# Small projects for learning and teaching
+
+...
